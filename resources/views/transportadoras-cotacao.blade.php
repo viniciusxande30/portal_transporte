@@ -1,8 +1,8 @@
 @include('includes.top')
 
-<div class="row g-5" style="margin:50px">
+<div class="row g-5" style="margin:0px">
 
-	<div class="col-xl-6 offset-xl-3">
+	<div class="col-xl-12 offset-xl-12">
 		<div class="site-title text-center">
 			<h2>Transportadoras de {{$origin}} para {{$destination}}</h2>
 			<p class="mb-0">
@@ -12,9 +12,9 @@
 
 	</div>
 </div>
-<div class="container">
+<div class="container" style="margin-top:-150px">
 @include('includes.form')
-</div>
+</div></div></div>
 @include('includes.footer')
 
 
