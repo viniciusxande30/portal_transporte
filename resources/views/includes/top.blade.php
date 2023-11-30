@@ -110,7 +110,7 @@
                 <a class="nav-link" href="{{url('/')}}/transportadoras">Transportadoras</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/')}}/solicitar-cotacao">Solicitar Cotação</a>
+                <a class="nav-link" href="{{url('/')}}/cotacao-de-frete">Solicitar Cotação</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="https://app.cargas.com.br/cadastrar" target="_blank">Cadastre-Se</a>
