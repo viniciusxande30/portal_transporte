@@ -59,9 +59,7 @@
 	</div>
 	
 
-	<!--==================================================-->
-	<!-- Start Euildint Header Style Two Area -->
-	<!--==================================================-->
+
 	<div class="header-area" id="sticky-header" style="border-radius:0 0 10px 10px">
 		<div class="container">
 			<div class="row align-items-center">
@@ -89,19 +87,42 @@
 	</div>
 
 	<!--Mobile Menu Area -->
-	<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
-		<div class="mobile-menu">
-			<nav class="Edulin_menu">
-				<ul class="nav_scroll">
-							<li><a href="#">Início</a></li>
-							<li><a href="{{url('/')}}/origem-e-destino">Origem e Destino</a></li>
-							<li><a href="{{url('/')}}/transportadoras">Transportadoras</a></li>
-							<li><a href="{{url('/')}}/solicitar-cotacao">Solicitar Cotação</a></li>
-							<li><a href="https://app.cargas.com.br/cadastrar" TARGET="_BLANK">Cadastre-Se</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-	<!--==================================================-->
-	<!-- End Euildint Header Style Two Area -->
-	<!--==================================================-->
+
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #fd7e14;">
+	<div class="container">
+    <a class="navbar-brand" href="#">
+<p style="font-weight:bolder;margin-top:15px">PORTAL DO TRANSPORTE</p>    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+		<div class="container">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#" >Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('/')}}/origem-e-destino">Origem e Destino</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('/')}}/transportadoras">Transportadoras</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('/')}}/solicitar-cotacao">Solicitar Cotação</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://app.cargas.com.br/cadastrar" target="_blank">Cadastre-Se</a>
+            </li>
+        </ul>
+</div>
+    </div>
+</div>
+</nav>
+
+<!-- Adicione o jQuery e o Popper.js antes do Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+

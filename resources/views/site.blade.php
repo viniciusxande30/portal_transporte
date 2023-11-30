@@ -10,6 +10,17 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+<?php
+// Verifica se é um dispositivo desktop usando a superglobal $_SERVER
+$isDesktop = !preg_match('/(android|iphone|ipod|opera mini|blackberry|windows phone)/i', $_SERVER['HTTP_USER_AGENT']);
+
+if ($isDesktop) {
+?>	
+
+
+
     <style>
         .autocomplete-container {
             display: flex;
@@ -45,77 +56,6 @@
             background-color: #f1f1f1;
         }
     </style>
-
-<!-- <div class="autocomplete-container" style="margin-top:500px">
-    <div>
-        <label for="autocomplete-input-origem">Origem:</label>
-        <input type="text" id="autocomplete-input-origem" class="autocomplete-input" placeholder="Digite a cidade de origem">
-        <div id="suggestions-list-origem" class="suggestions-list"></div>
-    </div>
-
-    <div>
-        <label for="autocomplete-input-destino">Destino:</label>
-        <input type="text" id="autocomplete-input-destino" class="autocomplete-input" placeholder="Digite a cidade de destino">
-        <div id="suggestions-list-destino" class="suggestions-list"></div>
-    </div>
-</div>
-
-<button onclick="buscar()">Buscar</button> -->
-
-
-
-
-<!-- <div class="breatcome-area" style="height:600px">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12">
-					<div class="breatcome-content">
-						<div class="breatcome-title">
-							<h1  style="text-align:center;font-weight:none;font-size:32px">Portal do Transporte</h1>
-							<p style="text-align:center;color:white;font-size:20px;margin-bottom:80px !important; line-height:30px">Faça sua Cotação de Frete com o Maior Portal de Transporte do País.<br> Temos Transportadoras para Todo o Brasil.</p>
-
-						</div>
-							<div class="row">
-								
-
-
-
-							<div class="autocomplete-container">
-							<div class="col-lg-5 col-md-5"  style="margin:0 !important;padding:0 !important">
-								<div class="form-box">
-        <input type="text" id="autocomplete-input-origem" class="autocomplete-input" placeholder="Digite a cidade de origem">
-        <div id="suggestions-list-origem" class="suggestions-list"></div>
-    </div>
-
-    <div class="col-lg-5 col-md-5" style="margin:0 !important;padding:0 !important" >
-								<div class="form-box">
-        <input type="text" id="autocomplete-input-destino" class="autocomplete-input" placeholder="Digite a cidade de destino">
-        <div id="suggestions-list-destino" class="suggestions-list"></div>
-    </div>
-	</div>
-</div>
-
-<button onclick="buscar()">Buscar</button>
-
-
-
-
-
-
-
-
-
-
-
-							</div>
-
-						</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-
 
 	<div class="breatcome-area" style="height:600px">
 		<div class="container">
@@ -154,6 +94,85 @@
 			</div>
 		</div>
 	</div>
+	<?php }else{ ?>
+
+		<style>
+        .autocomplete-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .autocomplete-input {
+            width: 200px;
+            padding: 8px;
+        }
+
+        .suggestions-list {
+			background-color:white;
+			z-index: 999;
+			position: absolute;
+			width: 100%;
+            /* 
+           
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-top: none; */
+        }
+
+        .suggestion-item {
+            padding: 8px;
+            cursor: pointer;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .suggestion-item:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+
+		<div class="breatcome-area" style="height:600px">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="breatcome-content">
+						<div class="breatcome-title">
+							<h1  style="text-align:center;font-weight:none;font-size:32px">Portal do Transporte</h1>
+							<p style="text-align:center;color:white;font-size:20px;margin-bottom:80px !important; line-height:30px">Faça sua Cotação de Frete com o Maior Portal de Transporte do País.<br> Temos Transportadoras para Todo o Brasil.</p>
+
+						</div>
+						<div class="row" style="text-align:center;" >
+						<div class="container">
+							<div class="col-lg-12 col-md-12"  style="margin:0 !important;padding:0 !important">
+								<div class="form-box">
+									<input type="text"  id="autocomplete-input-origem" name="name" placeholder="Origem da sua Carga" style="width: 100%;text-align:center;border-radius:5px 0px 0px 5px">
+									<div class="col-lg-12 col-md-12 suggestions-list" id="suggestions-list-origem" ></div>
+
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-12" style="margin:0 !important;padding:0 !important" >
+								<div class="form-box">
+									<input type="text" id="autocomplete-input-destino" name="name" placeholder="Destino da sua Carga" style="width: 100%;text-align:center;border-radius:0px 0px 0px 0px">
+									<div class="col-lg-12 col-md-12 suggestions-list" id="suggestions-list-destino"></div>
+
+								</div>
+							</div>
+						
+							<div class="col-lg-12 col-md-12">
+								<div class="form-box-button">
+									<button onclick="buscar()" type="Submit" style="border-radius:0px 5px 5px 0px">Solicitar Cotação</button>
+								</div>
+							</div>
+	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?php } ?>
 
 	<!--==================================================-->
 	<!-- Start Euildint Feature Style Two Area -->
