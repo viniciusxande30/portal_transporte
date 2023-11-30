@@ -7,7 +7,7 @@
 </style>
 
 <div class="container">
-			<div class="row" style="margin-top:100px">
+			<div class="row" style="margin-top:20px">
 				<div class="col-lg-12">
 					<!-- start section title -->
 					<div class="section-title text-center">
@@ -20,8 +20,14 @@
 			</div>
 			<div class="row">
       <?php for($i=0; $i < count($json->data);$i++){ ?>
-        <div class="col-lg-4 col-md-6 mb-30">
+		<?php
+// Verifica se é um dispositivo desktop usando a superglobal $_SERVER
+$isDesktop = !preg_match('/(android|iphone|ipod|opera mini|blackberry|windows phone)/i', $_SERVER['HTTP_USER_AGENT']);
 
+if ($isDesktop) {
+?>	
+        <div class="col-lg-4 col-md-6 mb-30">
+<?php }else{ ?><div class="col-lg-12 col-md-12 mb-0"><?php } ?>
       <div class="service-items-box-two" style="visibility: visible; height:200px;" >
       <div class="row">
 						<div class="col-lg-3" style="width:70px;height:70px;" >
@@ -34,7 +40,7 @@
       </div>
 						
 						<div class="service-items-content-two">
-							<p><?php if($json->data[$i]->about){echo substr($json->data[$i]->about,0,60).'...';}else{echo "Sem Informações.";} ?></p>
+							<p><?php if($json->data[$i]->about){echo substr($json->data[$i]->about,0,60).'...';}else{echo "Sem Mais Informações Adicionais Para Esta Transportadora...";} ?></p>
 						</div>
 				</div>
         </div>
@@ -67,7 +73,7 @@
 			
 				
 			</div>
-			<div class="row align-items-center mt-40 wow animate__slideInUp" style="visibility: visible;">
+			<!-- <div class="row align-items-center mt-40 wow animate__slideInUp" style="visibility: visible;">
 				<div class="col-lg-6 col-md-6">
 					<div class="service-disctription">
 						<span><a href="service-details.html">Precisa Fazer sua Cotação de Frete?</a> Clique Aqui e Cote seu Frete</span>
@@ -78,7 +84,7 @@
 						<a href="#">Cotação Rápida</a>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 <?php ?>

@@ -2,7 +2,7 @@
 <style>
    
    section {
-   margin-top:150px;
+   margin-top:25px;
      padding-bottom: 50px;
    }
 
