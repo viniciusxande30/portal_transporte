@@ -161,6 +161,7 @@
 
 	<!-- theme js -->
 	<script src="{{url('/')}}/assets/js/theme.js"></script>
+	<script src="{{url('/')}}/assets/js/masks.js"></script>
 
 </body>
 
