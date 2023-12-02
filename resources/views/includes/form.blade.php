@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
 <style>
@@ -14,9 +15,11 @@
 
         .suggestions-list {
 			background-color:white;
+            border:1px solid #eaeaea;
+            border-radius:20px
 			z-index: 999;
 			position: absolute;
-			width: 42%;
+			width: 36%;
             /* 
            
             max-height: 150px;
@@ -35,6 +38,7 @@
             background-color: #f1f1f1;
         }
     </style>
+
 <div class="container">
 <div class="row contact" style="margin-top:20px">
 				<div class="contact-box">
@@ -63,19 +67,19 @@
 
             <div class="col-6">
                 <div class="form-box">
-                    <input autocomplete="off" type="text" id="origin" class="form-control input-style-2" name="origin" placeholder="Cidade de Origem">
+                    <input id="autocomplete-input-origem" type="text" class="form-control input-style-2" name="origin" placeholder="Cidade de Origem">
                     <div class="col-lg-12 col-md-12 suggestions-list" id="suggestions-list-origem" ></div>
                     <input type="hidden" id="origin_id" name="origin_id">
-                    <span class="alert alert-error"></span>
+                    <!-- <span class="alert alert-error"></span> -->
                 </div>
             </div>
 
             <div class="col-6">
                 <div class="form-box">
-                    <input autocomplete="off" type="text" id="destination" class="form-control input-style-2" name="destination" placeholder="Cidade de Destino">
-                    <div class="col-lg-12 col-md-12 suggestions-list" id="suggestions-list-destination" ></div>
+                    <input id="autocomplete-input-destino" type="text"  class="form-control input-style-2" name="destination" placeholder="Cidade de Destino">
+                    <div class="col-lg-12 col-md-12 suggestions-list" id="suggestions-list-destino" ></div>
                     <input type="hidden" id="destination_id" name="destination_id">
-                    <span class="alert alert-error"></span>
+                    <!-- <span class="alert alert-error"></span> -->
                 </div>
             </div>
 

@@ -73,7 +73,7 @@ class Controller extends BaseController
         'origin_id'=>$request->origin_id,
         'destination_id'=>$request->destination_id,
         'note_cost'=>$request->note_cost,
-        'from'=>'transportadora.global',
+        'from'=>'transporte.com.br',
         'quantity'=>$request->quantity,
         'weight'=>$request->weight,
         'description'=>$request->description,
