@@ -44,12 +44,16 @@ class Controller extends BaseController
       return view('cadastro');
     }
     public function transportadorasCotacao($origin, $destination){
+      $transp = file_get_contents("https://cargas.com.br/api/cities/most-used-routes?limit=30");
+      
+      $json = json_decode($transp);
+
       $data_category = [
         'origin' => $origin,
         'destination' => $destination
       ];
       //$data['origin'] = $origin.','.$destination;
-      return view('transportadoras-cotacao', $data_category);
+      return view('transportadoras-cotacao', $data_category,['json'=>$json]);
     }
     public function sendQuotation(){
       return view('cotacao-enviada');

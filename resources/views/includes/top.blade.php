@@ -92,7 +92,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #F60;">
 	<div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{{url('/')}}">
 <p style="font-weight:bolder;margin-top:15px">PORTAL DO TRANSPORTE</p>    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -101,7 +101,7 @@
 		<div class="container">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#" >Início</a>
+                <a class="nav-link" href="{{url('/')}}" >Início</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{url('/')}}/origem-e-destino">Origem e Destino</a>
