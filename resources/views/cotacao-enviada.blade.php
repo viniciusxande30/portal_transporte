@@ -20,12 +20,10 @@
 					<div class="contact-title">
 						<h2>Cotação de Frete Enviada com Sucesso</h2>
 						<p>Aguarde, logo as melhores transportadoras para o seu frete entrarão em contato diretamente por E-mail.</p>
-						<div class="about-bottom">
 							<div class="eulding-btn about">
-								<a  style="margin-left:300px" href="{{url('/')}}">Voltar Para a Página Inicial<i class="bi bi-arrow-up-right-circle-fill"></i></a>
+								<p style="text-align:center"><a href="{{url('/')}}">Voltar Para a Página Inicial<i class="bi bi-arrow-up-right-circle-fill"></i></a></p>
 							</div>
 							
-						</div>
 					</div>
 				</div>
 			</div>
