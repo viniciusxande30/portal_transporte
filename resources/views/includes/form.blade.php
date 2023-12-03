@@ -49,18 +49,24 @@
 <div class="row contact" style="margin-top:25px">
 				<div class="contact-box">
 					<div class="contact-title">
-                    <?php
-foreach($json as $routes){
-if($routes->origin->url == $origin && $routes->destination->url == $destination){
+<?php
+if (isset($json) && is_array($json)) {
+    foreach($json as $routes){
+        if($routes->origin->url == $origin && $routes->destination->url == $destination){
 ?>
+
 <h2 style="font-size:30px">Transportadoras de {{$routes->origin->value}} para {{$routes->destination->value}}</h2>
 <p style="text-align:center">Faça sua cotação de frete totalmente gratuita e receba respostas de transportadoras diretamente por E-mail.</p>
 
 <?php
 	break;
-}
-}
+        }
+    }
+}else{
 ?>
+<h2 style="font-size:25px">Solicitar Cotação de Frete</h2>
+<p style="text-align:center">Faça sua cotação de frete totalmente gratuita e receba respostas de transportadoras diretamente por E-mail.</p>
+<?php } ?>
 					</div>
 
 
