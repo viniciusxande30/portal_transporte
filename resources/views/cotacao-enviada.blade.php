@@ -23,22 +23,9 @@
 							<div class="eulding-btn about">
 								<p style="text-align:center"><a href="{{url('/')}}">Voltar Para a Página Inicial<i class="bi bi-arrow-up-right-circle-fill"></i></a></p>
 							</div>
-							
 					</div>
 				</div>
 			</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-	
 
 @include('includes.footer')
