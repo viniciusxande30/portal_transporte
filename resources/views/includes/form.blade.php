@@ -1,6 +1,7 @@
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-
+	<!-- Place favicon.ico in the root directory -->
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png"> -->
+	<!-- ========== Start Stylesheet ========== -->
 <style>
         .autocomplete-container {
             display: flex;
@@ -90,20 +91,18 @@ if (isset($json) && is_array($json)) {
 
 
             <div class="col-6">
-                <div class="form-box">
-                    <input id="autocomplete-input-origem" type="text" class="form-control input-style-2" name="origin" placeholder="Cidade de Origem">
-                    <div class="col-lg-12 col-md-12 suggestions-list" id="suggestions-list-origem" ></div>
+                <div class="form-group">
+                    <input autocomplete="off" type="text" id="origin" class="form-control input-style-2" name="origin" placeholder="Cidade de Origem" data-gtm-form-interact-field-id="0">
                     <input type="hidden" id="origin_id" name="origin_id">
-                    <!-- <span class="alert alert-error"></span> -->
+                    <span class="alert alert-error"></span>
                 </div>
             </div>
 
             <div class="col-6">
-                <div class="form-box">
-                    <input id="autocomplete-input-destino" type="text"  class="form-control input-style-2" name="destination" placeholder="Cidade de Destino">
-                    <div class="col-lg-12 col-md-12 suggestions-list" id="suggestions-list-destino" ></div>
+            <div class="form-group">
+                    <input autocomplete="off" type="text" id="destination" class="form-control input-style-2" name="destination" placeholder="Cidade de Destino">
                     <input type="hidden" id="destination_id" name="destination_id">
-                    <!-- <span class="alert alert-error"></span> -->
+                    <span class="alert alert-error"></span>
                 </div>
             </div>
 
@@ -167,53 +166,12 @@ if (isset($json) && is_array($json)) {
 				</div>
 			</div>
 </div>
-<script>
-    let suggestions;
 
-    // Carregar o arquivo JSON de rotas_cities.json
-    $.getJSON('<?php echo url('/'); ?>/json/rotas_cities.json', function(data) {
-        suggestions = data.suggestions;
 
-        $("#autocomplete-input-origem, #autocomplete-input-destino").on("input", function () {
-            const inputText = $(this).val().toLowerCase();
-            const inputId = $(this).attr("id");
-            
-            if (inputText === '') {
-                $(`#suggestions-list-${inputId.split("-").pop()}`).empty();
-                return;
-            }
-            
-            const filteredSuggestions = suggestions.filter(suggestion => suggestion.value.toLowerCase().includes(inputText));
-            displaySuggestions(filteredSuggestions, inputId);
-        });
-    });
 
-    function displaySuggestions(suggestions, inputId) {
-        const suggestionsListId = `suggestions-list-${inputId.split("-").pop()}`;
-        const suggestionsList = $(`#${suggestionsListId}`);
-        suggestionsList.empty();
 
-        suggestions.forEach(suggestion => {
-            const listItem = $("<div class='suggestion-item'></div>")
-                .text(suggestion.value)
-                .on("click", function () {
-                    $(`#autocomplete-input-${inputId.split("-").pop()}`).val(suggestion.value);
-                    suggestionsList.empty();
-                });
 
-            suggestionsList.append(listItem);
-        });
-    }
 
-    function buscar() {
-        const origem = encodeURIComponent(getUrlParam($("#autocomplete-input-origem").val()));
-        const destino = encodeURIComponent(getUrlParam($("#autocomplete-input-destino").val()));
-        const url = `https://transporte.com.br/transportadoras/${origem}/${destino}`;
-        window.location.href = url;
-    }
 
-    function getUrlParam(city) {
-        const suggestion = suggestions.find(s => s.value === city);
-        return suggestion ? suggestion.url : '';
-    }
-</script>
+
+

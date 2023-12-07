@@ -29,6 +29,9 @@
 	<link rel="stylesheet" href="{{url('/')}}/assets/css/meanmenu.min.css" type="text/css" media="all">
 	<!-- transitions CSS -->
 	<link rel="stylesheet" href="{{url('/')}}/assets/css/owl.transitions.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="{{url('/')}}/assets/css/autocomplete.css" type="text/css" media="all">
+
 	<!-- venobox CSS -->
 	<link rel="stylesheet" href="{{url('/')}}/venobox/venobox.css" type="text/css" media="all">
 
@@ -48,6 +51,11 @@
 
 	<!-- modernizr js -->
 	<script src="{{url('/')}}/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+	<!-- jQuery -->
+
+
+
+	
 </head>
 
 <body>

@@ -110,7 +110,12 @@
 	<!--==================================================-->
 	<!-- End scrollup section Area -->
 	<!--==================================================-->
+	<script src="{{url('/')}}/assets/js/jquery-3.6.0.min.js"></script>
+	<script src=" {{url('/')}}/assets/js/autocomplete.min.js"></script>
+	<script src=" {{url('/')}}/assets/js/cities.js"></script>
 
+	<script src="{{url('/')}}/assets/js/autocomplete.js"></script>
+	<script src="{{url('/')}}/assets/js/cities.js"></script>
 
 	<!-- jquery js -->
 	<script src="{{url('/')}}/assets/js/vendor/jquery-3.6.2.min.js"></script>
@@ -162,6 +167,8 @@
 	<!-- theme js -->
 	<script src="{{url('/')}}/assets/js/theme.js"></script>
 	<script src="{{url('/')}}/assets/js/masks.js"></script>
+
+
 
 </body>
 
