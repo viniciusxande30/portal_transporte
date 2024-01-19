@@ -2,6 +2,15 @@
 <html lang="pt-br">
 
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3RWNJTXGK8"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-3RWNJTXGK8');
+	</script>
 	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Portal Transporte - O Melhor Guia para o Seu Transporte do Brasil </title>
@@ -36,10 +45,10 @@
 	<link rel="stylesheet" href="{{url('/')}}/venobox/venobox.css" type="text/css" media="all">
 
 	<!-- Slick Slider -->
-	<link rel="stylesheet" type="text/css" href="{{url('/')}}/assets/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="{{url('/')}}/assets/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="{{url('/')}}/assets/slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="{{url('/')}}/assets/slick/slick-theme.css" />
 
-	<link rel="stylesheet" type="text/css" href="{{url('/')}}/assets/css/owl.theme.default.min.css"/>
+	<link rel="stylesheet" type="text/css" href="{{url('/')}}/assets/css/owl.theme.default.min.css" />
 
 	<!-- bootstrap icons -->
 	<link rel="stylesheet" href="{{url('/')}}/assets/css/bootstrap-icons.css" type="text/css" media="all">
@@ -55,17 +64,17 @@
 
 
 
-	
+
 </head>
 
 <body>
 	<!-- loder -->
-	  <div class="loader-wrapper">
+	<div class="loader-wrapper">
 		<div class="loader"></div>
 		<div class="loder-section left-section"></div>
 		<div class="loder-section right-section"></div>
 	</div>
-	
+
 
 
 	<div class="header-area" id="sticky-header" style="border-radius:0 0 10px 10px">
@@ -86,7 +95,7 @@
 							<li><a href="{{url('/')}}/cotacao-de-frete">Solicitar Cotação</a></li>
 							<li><a href="https://app.cargas.com.br/cadastrar" TARGET="_BLANK">Cadastre-se</a></li>
 						</ul>
-						
+
 					</div>
 					<!-- end header menu -->
 				</div>
@@ -99,38 +108,40 @@
 
 
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #F60;">
-	<div class="container">
-    <a class="navbar-brand" href="{{url('/')}}">
-<p style="font-weight:bolder;margin-top:15px">PORTAL DO TRANSPORTE</p>    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
 		<div class="container">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{url('/')}}" >Início</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/')}}/origem-e-destino">Origem e Destino</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/')}}/transportadoras">Transportadoras</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('/')}}/cotacao-de-frete">Solicitar Cotação</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://app.cargas.com.br/cadastrar" target="_blank">Cadastre-Se</a>
-            </li>
-        </ul>
-</div>
-    </div>
-</div>
-</nav>
+			<a class="navbar-brand" href="{{url('/')}}">
+				<p style="font-weight:bolder;margin-top:15px">PORTAL DO TRANSPORTE</p>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<div class="container">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="{{url('/')}}">Início</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{url('/')}}/origem-e-destino">Origem e Destino</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{url('/')}}/transportadoras">Transportadoras</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{url('/')}}/cotacao-de-frete">Solicitar Cotação</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://app.cargas.com.br/cadastrar"
+								target="_blank">Cadastre-Se</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
 
-<!-- Adicione o jQuery e o Popper.js antes do Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+	<!-- Adicione o jQuery e o Popper.js antes do Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
